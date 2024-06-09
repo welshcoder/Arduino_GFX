@@ -71,6 +71,7 @@
 #include "display/Arduino_ILI9806.h"
 #include "display/Arduino_JBT6K71.h"
 #include "display/Arduino_JD9613.h"
+#include "display/Arduino_LT7680.h"
 #include "display/Arduino_NT35310.h"
 #include "display/Arduino_NT35510.h"
 #include "display/Arduino_NT39125.h"
