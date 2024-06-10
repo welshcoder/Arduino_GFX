@@ -1,12 +1,18 @@
+This is a fork of the Arduino_GFX library by moononournation. The primary purpose of this fork is to add support for the Levetop LT7680 TFT Controller chip. The SPI communication is structured slightly different to the HWSPI databus used in the original library, most notably the D/C selection process is done without a D/C hardware pin. See the src/databus/Arduino_HWSPI_NoDC class for more inforamtion. THis fork also adds rudimentary read operations that make the interaction with the LT7680 less prone to error, whilst retaining a good level of speed.
+
+The LT7680 display class is structured so that it uses the Arduino_GFX standard functions for drawing (using hardware functions where possible), but the additional functions such as PIP and BTE operations are also made available. See src/display/Arduino_LT7680.h for more information.
+
+The LT7680 class requires additional configuration for the display that's connected to the controller chip. Example configuration is given in src/display/Arduino_LT7680_Configs.h
+
+The rest of the library, and the text below, is from the original library.
+ 
+
 # Arduino_GFX
 
 Arduino_GFX is a Arduino graphics library supporting various displays with various data bus interfaces.
 
 This library start rewrite from Adafruit_GFX, LovyanGFX, TFT_eSPI, Ucglib, and more...
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/moononournation/Arduino_GFX)![GitHub Release Date](https://img.shields.io/github/release-date/moononournation/Arduino_GFX)![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/moononournation/Arduino_GFX/latest)![GitHub last commit](https://img.shields.io/github/last-commit/moononournation/Arduino_GFX)
-
-![GitHub Sponsors](https://img.shields.io/github/sponsors/moononournation)![Twitter Follow](https://img.shields.io/twitter/follow/moononournation)
 
 ## Ease of use
 
